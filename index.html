@@ -41,6 +41,34 @@
       font-size: 0.95rem;
       text-align: center;
     }
+
+    /* Updated Button Style */
+    a.btn {
+      display: block;
+      padding: 14px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      background: #1f2734;   /* brighter neutral */
+      border: 1px solid #4b5563;
+      color: #f9fafb;
+      text-align: center;
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease,
+        border-color 0.15s ease;
+    }
+
+    /* Hover Effect */
+    a.btn:hover {
+      transform: translateY(-2px);
+      background: #2c3650;   /* brighter hover */
+      border-color: #9ca3af;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+    }
+
     .buttons {
       display: flex;
       flex-direction: column;
@@ -49,33 +77,10 @@
     }
     @media (min-width: 640px) {
       .buttons {
-        flex-direction: column;
         max-width: 360px;
         margin-left: auto;
         margin-right: auto;
       }
-    }
-    a.btn {
-      display: block;
-      padding: 14px 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: 1px solid #4b5563;
-      background: #111827;
-      color: #f9fafb;
-      text-align: center;
-      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, border-color 0.1s ease;
-    }
-    a.btn.primary {
-      background: #f97316;
-      border-color: #f97316;
-      color: #111827;
-    }
-    a.btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
     }
     section {
       margin-top: 2rem;
@@ -107,7 +112,7 @@
     </p>
 
     <div class="buttons">
-      <a class="btn primary" href="https://prayer.slapyourfaith.com" target="_blank">
+      <a class="btn" href="https://prayer.slapyourfaith.com" target="_blank">
         🙏 Join the Prayer Circle (Free)
       </a>
       <a class="btn" href="https://family.slapyourfaith.com" target="_blank">
