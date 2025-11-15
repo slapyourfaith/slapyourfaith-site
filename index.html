@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Slap Your Faith Ministries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color-scheme: dark;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #1f2937, #020617);
+      color: #f9fafb;
+    }
+    .wrapper {
+      max-width: 640px;
+      width: 100%;
+      padding: 24px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+      text-align: center;
+    }
+    p.subtitle {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      opacity: 0.85;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 1rem;
+    }
+    @media (min-width: 640px) {
+      .buttons {
+        flex-direction: column;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    a.btn {
+      display: block;
+      padding: 14px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid #4b5563;
+      background: #111827;
+      color: #f9fafb;
+      text-align: center;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, border-color 0.1s ease;
+    }
+    a.btn.primary {
+      background: #f97316;
+      border-color: #f97316;
+      color: #111827;
+    }
+    a.btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    }
+    section {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    section h2 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    small.footer {
+      display: block;
+      margin-top: 1.5rem;
+      opacity: 0.6;
+      font-size: 0.75rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Slap Your Faith Ministries</h1>
+    <p class="subtitle">
+      Tools to help you fight for your family, lead your home, and walk out your faith with courage.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="https://prayer.slapyourfaith.com" target="_blank">
+        🙏 Join the Prayer Circle (Free)
+      </a>
+      <a class="btn" href="https://family.slapyourfaith.com" target="_blank">
+        🏠 Start the Family Blueprint (Free)
+      </a>
+      <a class="btn" href="https://www.youtube.com/@YOURCHANNEL" target="_blank">
+        ▶️ Watch Messages on YouTube
+      </a>
+      <a class="btn" href="https://YOUR-DONATION-LINK" target="_blank">
+        ❤️ Support the Mission
+      </a>
+    </div>
+
+    <section>
+      <h2>About Slap Your Faith</h2>
+      <p>
+        Slap Your Faith exists to help men and families put their faith back at the center of their homes.
+        We build simple, practical tools that make it easier to pray together, lead with purpose, and
+        build a house that actually stands when life hits hard.
+      </p>
+    </section>
+
+    <section>
+      <h2>Support the Mission</h2>
+      <p>
+        If these tools and messages impact you, consider supporting the work. Every gift helps us keep the
+        Prayer Circle and Family Blueprint free to use while we keep building better tools for families
+        who want to follow Jesus with boldness and order.
+      </p>
+    </section>
+
+    <small class="footer">
+      Slap Your Faith Ministries &copy; <span id="year"></span>
+    </small>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </div>
+</body>
+</html>
