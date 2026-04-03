@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; 
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color-scheme: dark;
     }
 
@@ -96,6 +96,11 @@
       .tools-grid {
         grid-template-columns: 1fr 1fr;
       }
+    }
+
+    .single-tool {
+      max-width: 420px;
+      margin: 0 auto;
     }
 
     .book-card,
@@ -214,11 +219,31 @@
 
     <h1>Slap Your Faith Ministries</h1>
     <p class="subtitle">
-      Practical biblical tools to help families rebuild the home on truth.
+      Helping families rebuild through daily prayer, truth, and action.
     </p>
 
+    <section>
+      <h2>Need Prayer? Start Here.</h2>
+      <p class="section-intro">
+        Join others, share prayers, and stay connected in daily faith. Start now for free.
+      </p>
+
+      <div class="single-tool">
+        <div class="info-card">
+          <img src="prayer.png" alt="Prayer Circle icon" class="tool-cover" />
+          <h3>Prayer Circle</h3>
+          <p>
+            Share prayers, see others praying for you, and stay grounded in daily faith.
+          </p>
+          <a class="btn btn-primary" href="https://prayer.slapyourfaith.com" target="_blank">
+            Start Praying Now
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section id="books">
-      <h2>Start With The Family Blueprint Series</h2>
+      <h2>Go Deeper With The Family Blueprint Series</h2>
       <p class="section-intro">
         Start with the book that fits your role in the home.
       </p>
@@ -249,20 +274,9 @@
     </section>
 
     <section>
-      <h2>Tools to Support the Mission</h2>
+      <h2>Listen and Stay Encouraged</h2>
 
-      <div class="tools-grid">
-        <div class="info-card">
-          <img src="prayer.png" alt="Prayer Circle icon" class="tool-cover" />
-          <h3>Prayer Circle</h3>
-          <p>
-            Share prayers, build circles, and stay connected in daily faith with others.
-          </p>
-          <a class="btn" href="https://prayer.slapyourfaith.com" target="_blank">
-            Open Prayer Circle
-          </a>
-        </div>
-
+      <div class="single-tool">
         <div class="info-card">
           <img src="podcast.png" alt="Podcast icon" class="tool-cover" />
           <h3>Podcast</h3>
