@@ -120,12 +120,12 @@
       margin: 0 0 10px;
       text-align: center;
       font-size: 1.2rem;
+      line-height: 1.3;
     }
 
     .book-card p,
     .info-card p,
-    .about-text,
-    .coming-soon {
+    .about-text {
       margin: 0 0 14px;
       line-height: 1.65;
       color: #d1d5db;
@@ -144,7 +144,11 @@
       border: 1px solid #4b5563;
       color: #f9fafb;
       text-align: center;
-      transition: all 0.15s ease;
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease,
+        border-color 0.15s ease;
     }
 
     a.btn:hover {
@@ -184,14 +188,13 @@
 <body>
   <div class="wrapper">
 
-    <img src="No.png" alt="Logo" class="logo" />
+    <img src="No.png" alt="Slap Your Faith Logo" class="logo" />
 
     <h1>Slap Your Faith Ministries</h1>
     <p class="subtitle">
       Helping families rebuild through daily prayer, truth, and action.
     </p>
 
-    <!-- 🔥 TOOLS SECTION -->
     <section>
       <h2>Tools to Strengthen Your Home</h2>
       <p class="section-intro">
@@ -199,10 +202,8 @@
       </p>
 
       <div class="tools-grid">
-
-        <!-- Prayer -->
         <div class="info-card">
-          <img src="prayer.png" class="tool-cover" />
+          <img src="prayer.png" alt="Prayer Circle icon" class="tool-cover" />
           <h3>Prayer Circle</h3>
           <p>
             Share prayers, see others praying for you, and stay grounded in daily faith.
@@ -212,22 +213,19 @@
           </a>
         </div>
 
-        <!-- Family Blueprint -->
         <div class="info-card">
-          <img src="family-blueprint.png" class="tool-cover" />
+          <img src="family-blueprint.png" alt="Family Blueprint app image" class="tool-cover" />
           <h3>Family Blueprint</h3>
           <p>
-            Build structure, track daily habits, and strengthen your family with intentional routines.
+            Bring order, build discipline, and strengthen your family through intentional daily structure.
           </p>
           <a class="btn btn-primary" href="https://blueprint.slapyourfaith.com" target="_blank">
             Open Family Blueprint
           </a>
         </div>
-
       </div>
     </section>
 
-    <!-- BOOKS -->
     <section>
       <h2>Go Deeper With The Family Blueprint Series</h2>
       <p class="section-intro">
@@ -236,7 +234,7 @@
 
       <div class="books-grid">
         <div class="book-card">
-          <img src="husband-book.jpg" class="book-cover" />
+          <img src="husband-book.jpg" alt="14 Days to Rebuild the Biblical Husband cover" class="book-cover" />
           <h3>14 Days to Rebuild the Biblical Husband</h3>
           <p>
             A practical guide to leadership, responsibility, and spiritual authority in the home.
@@ -247,7 +245,7 @@
         </div>
 
         <div class="book-card">
-          <img src="wife-book.jpg" class="book-cover" />
+          <img src="wife-book.jpg" alt="14 Days to Rebuild the Biblical Wife cover" class="book-cover" />
           <h3>14 Days to Rebuild the Biblical Wife</h3>
           <p>
             A practical guide to biblical strength, wisdom, and building a home with purpose.
@@ -259,13 +257,12 @@
       </div>
     </section>
 
-    <!-- PODCAST -->
     <section>
       <h2>Listen and Stay Encouraged</h2>
 
       <div class="tools-grid">
         <div class="info-card">
-          <img src="podcast.png" class="tool-cover" />
+          <img src="podcast.png" alt="Podcast icon" class="tool-cover" />
           <h3>Podcast</h3>
           <p>
             Listen to teachings and encouragement designed to help families apply biblical truth daily.
@@ -274,24 +271,29 @@
             Listen Now
           </a>
         </div>
-      </div>
 
-      <a class="btn" style="margin-top:20px;" href="https://buy.stripe.com/9B614n1w11j70Id5U10kE01" target="_blank">
-        ❤️ Support the Mission
-      </a>
+        <div class="info-card">
+          <img src="support.png" alt="Support the mission image" class="tool-cover" />
+          <h3>Support the Mission</h3>
+          <p>
+            Help us continue building tools, content, and resources that strengthen families and faith.
+          </p>
+          <a class="btn btn-primary" href="https://buy.stripe.com/9B614n1w11j70Id5U10kE01" target="_blank">
+            Support the Mission
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- ABOUT -->
     <section>
       <h2>About Slap Your Faith</h2>
       <p class="about-text">
         Slap Your Faith exists to help men and families put faith back at the center of the home.
-        Through books, teaching, prayer tools, and future Family Blueprint resources, the mission is simple:
+        Through books, teaching, prayer tools, and Family Blueprint resources, the mission is simple:
         bring biblical leadership, structure, and purpose back into the places that matter most.
       </p>
     </section>
 
-    <!-- FOOTER -->
     <small class="footer">
       Slap Your Faith Ministries &copy; <span id="year"></span>
     </small>
