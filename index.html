@@ -70,8 +70,7 @@
       font-size: 1rem;
     }
 
-    .books-grid,
-    .tools-grid {
+    .grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 18px;
@@ -82,23 +81,26 @@
     }
 
     @media (min-width: 760px) {
-      .books-grid,
-      .tools-grid {
+      .grid.two {
         grid-template-columns: 1fr 1fr;
       }
     }
 
-    .book-card,
-    .info-card {
+    .card {
       background: rgba(31, 39, 52, 0.86);
       border: 1px solid #374151;
       border-radius: 20px;
       padding: 18px;
       box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+      text-align: center;
     }
 
-    .book-cover,
-    .tool-cover {
+    .feature-card {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .cover {
       width: 100%;
       display: block;
       margin: 0 auto 16px;
@@ -111,20 +113,17 @@
       max-width: 220px;
     }
 
-    .tool-cover {
+    .icon-cover {
       max-width: 160px;
     }
 
-    .book-card h3,
-    .info-card h3 {
+    .card h3 {
       margin: 0 0 10px;
-      text-align: center;
       font-size: 1.2rem;
       line-height: 1.3;
     }
 
-    .book-card p,
-    .info-card p,
+    .card p,
     .about-text {
       margin: 0 0 14px;
       line-height: 1.65;
@@ -133,7 +132,20 @@
       text-align: center;
     }
 
-    a.btn {
+    .badge {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #caa472;
+      color: #fef3c7;
+      background: rgba(139, 94, 60, 0.2);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    a.btn,
+    .btn-disabled {
       display: block;
       padding: 14px 18px;
       border-radius: 999px;
@@ -144,6 +156,8 @@
       border: 1px solid #4b5563;
       color: #f9fafb;
       text-align: center;
+      max-width: 250px;
+      margin: 0 auto;
       transition:
         transform 0.15s ease,
         box-shadow 0.15s ease,
@@ -169,10 +183,9 @@
       border-color: #e2c08e;
     }
 
-    .book-card .btn,
-    .info-card .btn {
-      max-width: 240px;
-      margin: 0 auto;
+    .btn-disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
     }
 
     .footer {
@@ -190,65 +203,75 @@
 
     <img src="No.png" alt="Slap Your Faith Logo" class="logo" />
 
-    <h1>Slap Your Faith Ministries</h1>
+    <h1>Rebuilding Discipline, Faith, and Family</h1>
     <p class="subtitle">
-      Helping families rebuild through daily prayer, truth, and action.
+      Slap Your Faith exists to help families rebuild through biblical truth, prayer, structure, and real action.
+      Start with the podcast, then use the tools and books to go deeper.
     </p>
 
     <section>
-      <h2>Tools to Strengthen Your Home</h2>
+      <h2>Start With The Podcast</h2>
       <p class="section-intro">
-        Start with prayer or take the next step with tools built to help your family grow stronger together.
+        Real talk for men, women, and families trying to rebuild faith, discipline, and biblical order one step at a time.
       </p>
 
-      <div class="tools-grid">
-        <div class="info-card">
-          <img src="prayer.png" alt="Prayer Circle icon" class="tool-cover" />
-          <h3>Prayer Circle</h3>
+      <div class="grid">
+        <div class="card feature-card">
+          <img src="podcast.png" alt="Slap Your Faith Podcast icon" class="cover icon-cover" />
+          <h3>Slap Your Faith Podcast</h3>
           <p>
-            Share prayers, see others praying for you, and stay grounded in daily faith.
+            Weekly teachings, book-based episodes, and honest conversations built to help families apply biblical truth in real life.
           </p>
-          <a class="btn btn-primary" href="https://prayer.slapyourfaith.com" target="_blank">
-            Start Praying Now
-          </a>
-        </div>
-
-        <div class="info-card">
-          <img src="family-blueprint.png" alt="Family Blueprint app image" class="tool-cover" />
-          <h3>Family Blueprint</h3>
-          <p>
-            Bring order, build discipline, and strengthen your family through intentional daily structure.
-          </p>
-          <a class="btn btn-primary" href="https://blueprint.slapyourfaith.com" target="_blank">
-            Open Family Blueprint
+          <a class="btn btn-primary" href="https://www.buzzsprout.com/2462502" target="_blank">
+            Listen Now
           </a>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Go Deeper With The Family Blueprint Series</h2>
+      <h2>Pray With Others</h2>
       <p class="section-intro">
-        Start with the book that fits your role in the home.
+        Prayer Circle is a simple tool to share prayer requests, pray for others, and stay connected in daily faith.
       </p>
 
-      <div class="books-grid">
-        <div class="book-card">
-          <img src="husband-book.jpg" alt="14 Days to Rebuild the Biblical Husband cover" class="book-cover" />
+      <div class="grid">
+        <div class="card feature-card">
+          <img src="prayer.png" alt="Prayer Circle icon" class="cover icon-cover" />
+          <h3>Prayer Circle</h3>
+          <p>
+            Share prayers, see others praying for you, and stay grounded with people who want to lift one another up.
+          </p>
+          <a class="btn btn-primary" href="https://prayer.slapyourfaith.com" target="_blank">
+            Start Praying Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Go Deeper With The Books</h2>
+      <p class="section-intro">
+        The Family Blueprint Series is built to help husbands and wives rebuild their role in the home with biblical structure and purpose.
+      </p>
+
+      <div class="grid two">
+        <div class="card">
+          <img src="husband-book.jpg" alt="14 Days to Rebuild the Biblical Husband cover" class="cover book-cover" />
           <h3>14 Days to Rebuild the Biblical Husband</h3>
           <p>
-            A practical guide to leadership, responsibility, and spiritual authority in the home.
+            A practical guide to leadership, responsibility, discipline, and spiritual authority in the home.
           </p>
           <a class="btn btn-primary" href="https://www.amazon.com/dp/B0GT5FDKRJ" target="_blank">
             Buy the Husband Book
           </a>
         </div>
 
-        <div class="book-card">
-          <img src="wife-book.jpg" alt="14 Days to Rebuild the Biblical Wife cover" class="book-cover" />
+        <div class="card">
+          <img src="wife-book.jpg" alt="14 Days to Rebuild the Biblical Wife cover" class="cover book-cover" />
           <h3>14 Days to Rebuild the Biblical Wife</h3>
           <p>
-            A practical guide to biblical strength, wisdom, and building a home with purpose.
+            A practical guide to biblical strength, wisdom, purpose, and building a home that stands.
           </p>
           <a class="btn" href="https://www.amazon.com/dp/B0GSVN1JQK" target="_blank">
             Buy the Wife Book
@@ -258,25 +281,38 @@
     </section>
 
     <section>
-      <h2>Listen and Stay Encouraged</h2>
+      <h2>Coming Soon</h2>
+      <p class="section-intro">
+        More tools are being built to help families bring structure, prayer, and biblical order into daily life.
+      </p>
 
-      <div class="tools-grid">
-        <div class="info-card">
-          <img src="podcast.png" alt="Podcast icon" class="tool-cover" />
-          <h3>Podcast</h3>
+      <div class="grid">
+        <div class="card feature-card">
+          <span class="badge">Coming Soon</span>
+          <img src="family-blueprint.png" alt="Family Blueprint app image" class="cover icon-cover" />
+          <h3>Family Blueprint</h3>
           <p>
-            Listen to teachings and encouragement designed to help families apply biblical truth daily.
+            A future family system designed to help bring order, build discipline, and strengthen your home through intentional daily structure.
           </p>
-          <a class="btn" href="https://www.buzzsprout.com/2462502" target="_blank">
-            Listen Now
-          </a>
+          <div class="btn-disabled">
+            Coming Soon
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="info-card">
-          <img src="support.png" alt="Support the mission image" class="tool-cover" />
-          <h3>Support the Mission</h3>
+    <section>
+      <h2>Support The Mission</h2>
+      <p class="section-intro">
+        Help us keep building books, tools, podcast episodes, and resources that strengthen families and faith.
+      </p>
+
+      <div class="grid">
+        <div class="card feature-card">
+          <img src="support.png" alt="Support the mission image" class="cover icon-cover" />
+          <h3>Support Slap Your Faith</h3>
           <p>
-            Help us continue building tools, content, and resources that strengthen families and faith.
+            Every gift helps continue the mission of rebuilding homes through biblical truth, prayer, and action.
           </p>
           <a class="btn btn-primary" href="https://buy.stripe.com/9B614n1w11j70Id5U10kE01" target="_blank">
             Support the Mission
@@ -288,9 +324,9 @@
     <section>
       <h2>About Slap Your Faith</h2>
       <p class="about-text">
-        Slap Your Faith exists to help men and families put faith back at the center of the home.
-        Through books, teaching, prayer tools, and Family Blueprint resources, the mission is simple:
-        bring biblical leadership, structure, and purpose back into the places that matter most.
+        Slap Your Faith exists to help men, women, and families put faith back at the center of the home.
+        Through the podcast, books, prayer tools, and future Family Blueprint resources, the mission is simple:
+        rebuild discipline, restore biblical order, and strengthen the house that stands.
       </p>
     </section>
 
